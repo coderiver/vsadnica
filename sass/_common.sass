@@ -52,7 +52,7 @@ body
 		top: -220px
 		left: 53%
 		margin-left: -617px 
-		opacity: 0.75 
+		opacity: 0.5 
 		z-index: -1
 		+s(bg-top)
 =sn
@@ -87,6 +87,54 @@ body
 		z-index: -2
 		+border-radius(50%)
 		+box-shadow(0px 20px 30px #000)
+.btn-pn
+	padding: 1px 
+	height: 20px
+	border: 1px solid #4C382F 
+	font-size: 12px 
+	line-height: 20px
+	text-decoration: none
+	display: inline-block
+	background: #50362C 
+	+transition(0.2s)
+	+sn
+	span
+		padding: 2px 6px 
+		color: #9B8168
+		border: 1px solid #714f3f
+		+box
+	&:hover 
+		background: #8C755E 
+		span
+			color: #3B2920
+			border: 1px solid #8c755e
+.breadcrumbs
+	margin: 20px 0 18px 
+	font-size: 0
+	li
+		position: relative
+		padding: 0 8px 
+		font-size: 12px
+		display: inline-block
+		a
+			color: #9B8168 
+			&:hover
+				text-decoration: none
+		&:before
+			position: absolute
+			content: ''
+			top: 50%
+			right: -1.5px
+			margin-top: -1.5px
+			width: 3px
+			height: 3px
+			background: #714F3F 
+			+border-radius(50%)
+		&:first-child
+			padding-left: 0
+		&:last-child
+			&:before
+				display: none
 .soc
 	margin: 45px 0 20px
 	li
@@ -125,3 +173,32 @@ body
 		.g
 			margin: -6px 0 0 -4.5px
 			+s(g)
+.footer
+	position: relative
+	margin: 20px auto 0
+	width: 980px
+	height: 158px
+	font-size: 12px
+	color: #8C755E 
+	+sn
+	.block-shadow
+		top: 0
+		height: 45px
+		+rotate(180, deg)
+.footer__copy
+	float: left
+	margin-top: 48px
+	text-transform: uppercase
+.footer__right
+	float: right
+	text-align: right
+.development
+	position: relative
+	padding-right: 50px
+	display: inline-block
+	a
+		position: absolute
+		top: 50%
+		right: 0
+		margin-top: -8px
+		+s(del)

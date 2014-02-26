@@ -146,6 +146,8 @@
 		left: 0
 		bottom: -125px
 		+rotate(180, deg)
+	.line
+		background: #563522 
 .line
 	position: absolute
 	left: 0
@@ -173,7 +175,7 @@
 		width: 0.1px
 		height: 0.1px
 		z-index: -1
-		+box-shadow(0 0 335px 50px #fff)
+		+box-shadow(0 0 335px 30px #fff)
 	.title-slideshow
 		margin-top: 70px
 		color: #F2CF71 
@@ -234,6 +236,8 @@
 	color: #8C755E 
 .date_top
 	margin: 28px 0 10px
+.date_doings
+	margin: 20px 0 10px
 .article-field
 	position: relative
 	margin: 30px 0 18px
@@ -249,6 +253,9 @@
 		left: -40%
 		bottom: -7px
 		width: 950px
+.article-field__mod
+	margin: 0
+	padding: 12px 9px 35px 
 .article-field__img
 	float: left
 	margin: 6px 20px 0 0
@@ -393,32 +400,3 @@
 	overflow: hidden
 	img
 		display: block
-.footer
-	position: relative
-	margin: 0 auto
-	width: 980px
-	height: 158px
-	font-size: 12px
-	color: #8C755E 
-	+sn
-	.block-shadow
-		top: 0
-		height: 45px
-		+rotate(180, deg)
-.footer__copy
-	float: left
-	margin-top: 48px
-	text-transform: uppercase
-.footer__right
-	float: right
-	text-align: right
-.development
-	position: relative
-	padding-right: 50px
-	display: inline-block
-	a
-		position: absolute
-		top: 50%
-		right: 0
-		margin-top: -8px
-		+s(del)
