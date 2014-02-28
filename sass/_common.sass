@@ -1,60 +1,9 @@
-// # SHORT HOWTO
-// ## Sprites
-//     .whatever
-//          +sized-sprite($icons, coderiver) //or
-// 			+s(codedby) //gets default value for spritemap as $icons
-// ### animation example
-//     +include keyframes(rotate)
-//        from
-//           +rotate(0)
-//        to
-//           +rotate(360)
-// ## animation usage
-//     body:hover
-// 	    +animation(rotate 200s linear infinite)
-// ## animations easing, see easings.net for full list and examples, tnx @ai
-//     transition: all 1.2s ceaser($ease-in)
-// ## gradient example
-//     +background-image(linear-gradient(#232323, #5c5c5c));
-//     +g(#232323, #5c5c5c);
-//	   horizontal
-//     +gh(#232323, #5c5c5c);
-// ## making bw-images
-//     img
-//			@extend %gray
-// ## predefined media-queries: https://github.com/paranoida/sass-mediaqueries
-//     +min-screen(320)
-//			display: none
-// +max-screen(1000), +iphone5, +iphone4, +ipad-retina, +ipad, +hdpi - also available
-//
-// ## use cycles
-//     @for $i from 1 through 3
-//       .item-#{$i}
-//			width: 2em * $i;
-//     @each $s in a,b,c
-// 	    	#{$s}
-//				display: none
-// ## fonts 
-// Save fonts to /css/fonts, after that write (eot, woff, ttf):
-// +font(book, cytiapro-black-webfont)  
-// =book
-// 	font-family: "book",arial,sans-serif 
-	
 body
 	position: relative
 	font-size: 14px 
 	line-height: 1.4
 	background: url("../img/bg-pic.png")
 	background-size: cover
-	&:before
-		// position: absolute
-		// content: ""
-		// top: -220px
-		// left: 53%
-		// margin-left: -617px 
-		// opacity: 0.5 
-		// z-index: -1
-		//+s(bg-top)
 .wrapsite
 	background: url(../img/bg-top.png) no-repeat 50% 0
 =sn
@@ -62,6 +11,34 @@ body
 	
 =sr
 	font-family: 'PT Serif', Arial, sans-serif
+.container
+	margin: 0 auto
+	width: 980px
+	color: #9e846b
+	font-weight: 400
+	+sn
+	a
+		color: #E0CA92 
+		+sr
+		&:hover
+			text-decoration: none
+.container__mod
+	overflow: hidden
+.title-l
+	position: relative
+	padding-bottom: 5px
+	text-transform: uppercase
+	font-size: 30px
+	font-weight: normal
+	line-height: 1
+	color: #F2CF71 
+	overflow: hidden
+	+sr
+	.line
+		position: absolute
+		left: -40%
+		bottom: -7px
+		width: 900px
 .btn
 	position: relative
 	width: 240px
@@ -89,7 +66,7 @@ body
 		z-index: -2
 		+border-radius(50%)
 		+box-shadow(0px 20px 30px #000)
-.btn-pn
+.btn-pg
 	padding: 1px 
 	height: 20px
 	border: 1px solid #4C382F 
@@ -105,21 +82,108 @@ body
 		color: #9B8168
 		border: 1px solid #714f3f
 		+box
-	&:hover 
+	&:hover
+		background: #33231C 
+		border-color: #33231C
+		span
+			border-color: #33231C
+	&:active 
 		background: #8C755E 
 		span
 			color: #3B2920
 			border: 1px solid #8c755e
+	&.is-active 
+		background: #8C755E 
+		span
+			color: #3B2920
+			border: 1px solid #8c755e
+.btn-sbm
+	padding: 1px
+	border: 1px solid #4c382f 
+	text-align: center
+	+g(#483128, #3f2b23)
+	+transition(0.1s)
+	+sr
+	+box
+	span
+		width: 234px
+		height: 30px
+		color: #F2CF71
+		font-size: 18px 
+		line-height: 28px
+		border: 1px solid #714F3F 
+		display: inline-block
+	&:hover
+		+g(#32221c, #473128)
+		span
+			color: #B79E85 
+			border-color: rgba(0, 0, 0, 0) 
+	&:active
+		+box-shadow(inset 0px 4px 10px #2d1f19)
+		span
+			color: #B79E85 
+			border-color: rgba(0, 0, 0, 0) 
+.btn-sbm_sha
+	position: relative
+	&:before
+		position: absolute
+		content: ""
+		left: 25px
+		right: 25px
+		bottom: 8px
+		height: 1px
+		z-index: -1
+		+box-shadow(0px 4px 10px 10px #2d1f19)
+	&:active
+		&:before
+			bottom: 12px
+			+transition(0.4s)
+.soc-link
+	position: relative
+	padding-left: 17px 
+	line-height: 1
+	color: #8c755e !important 
+	display: inline-block
+	i
+		position: absolute
+		content: ''
+		left: 0
+		top: 3px
+		+s(icon-link)
+	&:active
+		text-decoration: none
+		color: #6f4e3e
+		i
+			+s(icon-link_ac)
+	&:hover
+		text-decoration: none
+.soc-link_dis
+	i
+		top: 1px
+		+s(pic-dis)
+	&:active
+		i
+			+s(pic-dis1)
+.soc-link_fot
+	i
+		+s(pic-fot)
+	&:active
+		i
+			+s(pic-fot1)
 .breadcrumbs
-	margin: 20px 0 18px 
-	font-size: 0
+	margin: 15px 0 12px
+	line-height: 1
 	li
 		position: relative
 		padding: 0 8px 
 		font-size: 12px
+		color: #9B8168
 		display: inline-block
+		+sn
 		a
+			font-size: 12px
 			color: #9B8168 
+			+sn
 			&:hover
 				text-decoration: none
 		&:before
@@ -175,6 +239,27 @@ body
 		.g
 			margin: -6px 0 0 -4.5px
 			+s(g)
+.pagination
+	margin-top: 20px
+	font-size: 12px
+	li
+		margin-right: 3px
+		display: inline-block
+		+sn
+		a
+			height: 18px
+			width: 18px
+			line-height: 18px
+			text-align: center
+			+sn
+			span
+				height: 18px
+				padding: 0
+				display: block
+		.btn-pg_pn
+			width: 56px
+		&:first-child
+			margin-right: 10px
 .footer
 	position: relative
 	margin: 20px auto 0

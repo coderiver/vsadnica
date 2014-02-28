@@ -4,8 +4,11 @@
 	padding-top: 10px
 	width: 980px
 	height: 92px
+	color: #9e846b
 	line-height: 1
+	font-weight: 400
 	+box
+	+sn
 .header__left
 	float: left
 	.title-top
@@ -22,6 +25,8 @@
 .title-article
 	color: #E0CA92 
 	font-size: 24px
+	font-weight: 400 
+	line-height: 1
 	+sr
 .menu-top
 	margin-bottom: 25px
@@ -35,10 +40,6 @@
 		color: #CEB397 
 		&:hover
 			text-decoration: none
-.content-text
-	color: #9e846b
-	font-weight: normal
-	+sn
 .header__address
 	color: #8C755E 
 	&:hover
@@ -126,13 +127,68 @@
 			height: 3px
 			background: #714F3F
 			+border-radius(50%)
-.container
-	margin: 0 auto
-	width: 980px
-.cycle-block
+.cycle__row
 	position: relative
 	margin-top: 5px
+	margin-bottom: 30px
 	height: 460px
+.cycle__item
+	width: 100%
+	height: 460px
+.cycle__item_left
+	width: 50%
+	float: left
+.cycle__item_right
+	width: 50%
+	float: right
+.cycle__item_left, .cycle__item_right
+	position: relative
+	text-align: center
+	color: #CEB397 
+	font-size: 30px
+	font-weight: 400
+	line-height: 45px
+	+sn
+	.cycle__shadow
+		position: absolute
+		left: 50%
+		top: 45%
+		width: 0.1px
+		height: 0.1px
+		z-index: -1
+		+box-shadow(0 0 335px 30px #fff)
+	.title-slideshow
+		margin-top: 70px
+		color: #F2CF71 
+		font-size: 40px
+		font-weight: 400
+		letter-spacing: 4px 
+		line-height: 48px
+		+sr
+	.cycle__text_big
+		font-size: 44px
+	.btn
+		margin-top: 30px
+.cycle__nav
+	position: absolute
+	top: 50%
+	margin-top: -22px
+	+s(pic-pref)
+	i
+		position: absolute
+		top: 0
+		left: 0
+		opacity: 0
+		cursor: pointer
+	&:hover
+		i
+			opacity: 1
+			+s(pic-pref1)
+.cycle__nav_prev
+	left: -62px
+.cycle__nav_next
+	right: -62px
+	+rotate(180, deg)
 .block-shadow
 	position: absolute
 	bottom: 0
@@ -156,92 +212,18 @@
 	height: 8px
 	background: #714A3A 
 	+border-radius(150%)
-.cycle-slideshow__item
-	width: 100%
-	height: 460px
-.cycle-slideshow__item_left
-	width: 50%
-	float: left
-.cycle-slideshow__item_right
-	width: 50%
-	float: right
-.cycle-slideshow__item_left, .cycle-slideshow__item_right
-	position: relative
-	text-align: center
-	.cycle-slideshow__shadow
-		position: absolute
-		left: 50%
-		top: 45%
-		width: 0.1px
-		height: 0.1px
-		z-index: -1
-		+box-shadow(0 0 335px 30px #fff)
-	.title-slideshow
-		margin-top: 70px
-		color: #F2CF71 
-		font-size: 40px
-		font-weight: 400
-		letter-spacing: 4px 
-		line-height: 48px
-		+sr
-	.text-slideshow
-		color: #CEB397 
-		font-size: 30px
-		line-height: 45px
-		+sn
-		.text-slideshow_big
-			font-size: 44px
-	.btn
-		margin-top: 30px
-.cycle-slideshow__nav
-	position: absolute
-	top: 50%
-	margin-top: -22px
-	+s(pic-pref)
-	i
-		position: absolute
-		top: 0
-		left: 0
-		opacity: 0
-		cursor: pointer
-	&:hover
-		i
-			opacity: 1
-			+s(pic-pref1)
-.cycle-slideshow__prev
-	left: -62px
-.cycle-slideshow__next
-	right: -62px
-	+rotate(180, deg)
-.l-col__left
-	float: left
-	width: 700px
-	+box
-	.l-title
-		margin-top: 15px
-.l-title
-	position: relative
-	text-transform: uppercase
-	font-size: 30px
-	font-weight: normal
-	color: #F2CF71 
-	overflow: hidden
-	+sr
-	.line
-		position: absolute
-		left: -40%
-		bottom: -7px
-		width: 900px
 .date
-	color: #8C755E 
+	color: #8C755E
+	font-weight: normal
+	+sn
 .date_top
 	margin: 28px 0 10px
 .date_doings
 	margin: 20px 0 10px
-.article-field
+.article
 	position: relative
-	margin: 30px 0 18px
-	padding: 0 72px 18px 0
+	margin: 18px 0 18px
+	padding: 18px 0
 	line-height: 21px
 	overflow: hidden 
 	+sn
@@ -253,10 +235,13 @@
 		left: -40%
 		bottom: -7px
 		width: 950px
-.article-field__mod
+.article_pad
+	margin-top: 10px
+	padding-right: 72px 
+.article_mod
 	margin: 0
-	padding: 12px 9px 35px 
-.article-field__img
+	padding: 12px 9px 35px 0
+.article__img
 	float: left
 	margin: 6px 20px 0 0
 	width: 298px
@@ -265,44 +250,43 @@
 	overflow: hidden 
 	img
 		display: block
-.article-link
-	color: #E0CA92 
-	&:hover
-		text-decoration: none
-.article-block
+.article__block
 	margin-right: 40px
 	width: 186px
 	display: inline-block
-.article-block__img
-	margin-bottom: 10px
-	width: 184px
-	height: 118px
-	overflow: hidden
-	border: 1px solid #37261e
-	background: #D7D4D2 
-	img
-		opacity: 0.9
-		display: block
+	.article__img
+		margin-bottom: 10px
+		width: 184px
+		height: 118px
+		background: #D7D4D2 
+		img
+			opacity: 0.9
+			&:hover
+				opacity: 1
+				+transition(0.2s)
+	.article__link
+		margin-top: 10px
+		color: #E0CA92 
+		letter-spacing: 1px 
+		+sr
 		&:hover
-			opacity: 1
-			+transition(0.2s)
-.article-link
-	margin-top: 10px
-	color: #E0CA92 
-	letter-spacing: 1px 
-	+sr
-.l-col__right
-	float: right
-	padding: 2px
-	width: 278px
-	border: 1px solid #4c382f
-	background: #473229 
-	+box 
-.article-row
+			text-decoration: none
+.board
 	padding: 20px 18px 12px 15px 
 	width: 272px
 	border: 1px solid #714F3F 
 	+box
+	.board__link
+		margin: 8px 0 7px
+		letter-spacing: 1px 
+		display: inline-block
+.title-ads
+	font-size: 20px
+	text-transform: uppercase
+	color: #F2CF71 
+	font-weight: 400  
+	+sr
+.board, .form
 	.title-ads
 		position: relative
 		margin-bottom: 16px 
@@ -316,16 +300,7 @@
 			width: 100%
 			height: 1px
 			+gh(#714f3f, #402b23)
-	.article-link
-		margin: 8px 0 7cycle-slideshowpx
-		display: inline-block
-.title-ads
-	font-size: 20px
-	text-transform: uppercase
-	color: #F2CF71 
-	font-weight: 400  
-	+sr
-.article-col
+.board__col
 	position: relative
 	padding-bottom: 15px
 	margin-bottom: 15px
@@ -343,31 +318,12 @@
 		height: 1px
 		opacity: 0.8 
 		+gh(#714f3f, #402b23)
-.all-link
-	position: relative
-	padding-left: 17px 
-	line-height: 1
-	color: #8C755E 
-	display: inline-block
-	i
-		position: absolute
-		content: ''
-		left: 0
-		top: 3px
-		+s(icon-link)
-	&:active
-		text-decoration: none
-		color: #6f4e3e
-		i
-			+s(icon-link_ac)
-	&:hover
-		text-decoration: none
-.photo-gallery
+.carousel
 	margin-top: 40px
-	.l-title .line
+	.title-l .line
 		left: -80%
 		width: 1900px
-.carousel-block
+.carousel__block
 	position: relative
 	.carousel__nav 
 		position: absolute
@@ -388,10 +344,10 @@
 	.carousel__nav_next
 		right: -32px
 		+rotate(180, deg)
-.carousel
-	margin: 20px 0 40px 
-	width: 100% !important
-	overflow: hidden
+	.cycle-slideshow
+		margin: 20px 0 40px 
+		width: 100% !important
+		overflow: hidden
 .carousel__item
 	margin-right: 20px
 	width: 178px
@@ -400,3 +356,331 @@
 	overflow: hidden
 	img
 		display: block
+.filter
+	position: relative
+	padding: 2px
+	margin-top: 25px
+	width: 100%
+	height: 34px
+	border: solid 1px #4C382F 
+	background: #473229 
+	+box
+.filter__row
+	padding: 0 10px 0 0 
+	line-height: 26px
+	border: 1px solid #714F3F
+	.filter__item
+		margin: 4px 5px 0
+		padding: 0 5px 
+		color: #9B8168 
+		font-size: 12px
+		line-height: 20px
+		vertical-align: top
+		display: inline-block
+		+transition(0.2s)
+		+sn
+		&:active
+			color: #e0ca92
+			text-decoration: none
+			background: #3E2A22
+		&:hover
+			color: #e0ca92
+			text-decoration: none 
+	.filter__title
+		padding: 0 5px 
+		color: #CEB397 
+		font-weight: 400 
+		display: inline-block
+		+sr
+	.is-active
+		color: #e0ca92
+		text-decoration: none
+		background: #3E2A22  
+	.filter__item_right
+		float: right
+.description
+	.article
+		margin: 0
+		padding: 20px 0
+		min-height: 370px
+	.article__img
+		margin-top: 2px 
+		width: 398px
+		height: 298px
+	.title-article
+		margin-bottom: 10px
+		display: inline-block
+	.line
+		left: -100%
+		width: 1900px
+	.line_mod
+		border-top: 1px solid #704e3e
+	.soc-link_fot
+		margin-left: 38px
+.article__field
+	margin-bottom: 20px
+	display: inline-block
+.article_board
+	margin: 0
+	padding-top: 12px
+	padding-right: 18px
+	border-bottom: 1px dashed #714f3f 
+	.title-article
+		margin-bottom: 15px
+		display: block
+// photo
+.gallery
+	position: relative
+	margin-left: -36px
+	overflow: hidden
+	&:before
+		position: absolute
+		content: ''
+		left: 0
+		bottom: 0
+		width: 100%
+		height: 1px
+		+gh(#714F3F, #3f2b23)
+	.article__block
+		margin: 20px 0 20px 36px
+		width: 215px
+		height: 188px
+		overflow: hidden
+		.article__img
+			margin: 0 0 5px 0
+			width: 213px
+			height: 138px
+.gallery__treners
+	.article__block
+		height: 238px
+		.article__link
+			margin-bottom: 8px 
+			display: inline-block
+// price
+.l_price
+	position: relative
+	margin-top: 0
+	margin-bottom: 15px
+	.title-l
+		margin-top: 0 !important
+		margin-bottom: 28px
+	&:before
+		position: absolute
+		content: ''
+		left: 0
+		bottom: 0
+		width: 100%
+		height: 1px
+		+gh(#714F3F, #3f2b23)
+.price
+	margin-bottom: 30px
+	padding-right: 54px
+	line-height: 1
+	+box
+	.title-price
+		padding-bottom: 5px 
+		border-bottom: 1px dashed #714f3f
+.title-price
+	font-size: 20px
+	color: #E4CF98 
+	font-weight: 400
+	line-height: 1 
+	+sr
+.price__info
+	margin-top: 18px
+	color: #9B8168 
+	font-size: 12px
+	font-style: italic
+	+sn
+.price__row
+	margin: 18px 0 
+	line-height: 1
+	+clr
+.price__services
+	float: left
+.price__cost
+	float: right
+.price__border
+	height: 13px
+	border-bottom: 1px dotted #714f3f
+	overflow: hidden 
+.l__right2
+	.title-price
+		color: #F2CF71
+		line-height: 1.5
+		margin-bottom: 14px
+	p
+		margin-bottom: 20px
+// contacts
+.contacts
+	margin-top: 5px
+	.title-l
+		margin: 0
+.contacts__inf
+	margin: 15px 0
+	color: #CEB397 
+	font-size: 16px
+	line-height: 1
+	span
+		color: #9B8168
+	a
+		color: #F2CF71 
+		text-decoration: none
+		+sn
+.form
+	width: 278px
+	height: 288px
+	padding: 20px 19px
+	border: 1px solid #714f3f 
+	+box 
+.form__field
+	margin-bottom: 10px
+	input, textarea
+		padding: 8px
+		width: 100%
+		color: #CEB397 
+		line-height: 1
+		border: 1px solid #543B30 
+		background: #412D24 
+		+box-shadow(inset 0 0 5px #2e211b)
+		+box
+		+sn
+		+placeholder
+			color: #CEB397
+			+sn
+	input
+		height: 28px
+		line-height: 28px
+	textarea
+		height: 78px
+		resize: none
+.form__field_textarea
+	position: relative
+	&:before
+		position: absolute
+		content: "" 
+		right: 0
+		bottom: 5px
+		+s(area-pic)
+.form__field_name
+	text-transform: uppercase
+.map
+	margin-top: 18px
+	padding: 2px 
+	height: 398px
+	border: 1px solid #4c382f
+	background: #3F2B23 
+	+box 
+	.map__field
+		padding: 4px
+		border: 1px solid #714f3f
+		+box
+	.map__img
+		position: relative
+		border: 1px solid #714F3F 
+		height: 382px
+		overflow: hidden
+		+box
+		img
+			display: block
+		&:before
+			position: absolute
+			content: ''
+			top: 108px
+			left: 390px
+			+s(map-pic)
+// popup
+.popup
+	position: absolute
+	top: 0
+	left: 0
+	bottom: 0
+	width: 100%
+	z-index: 1000
+	position: fixed
+	background: rgba(0, 0, 0, .4) 
+.poput__field
+	position: absolute
+	padding: 2px
+	top: 50%
+	left: 50%
+	margin: -169px 0 0 -195px
+	width: 390px
+	height: 335px 
+	color: #9B8168 
+	z-index: 1000
+	border: 1px solid #4c382f
+	background: #3F2B23 
+	+box
+	+sn
+	i
+		position: absolute
+		content: "" 
+		top: 6px
+		right: 6px
+		cursor: pointer
+		+s(close)
+		&:hover
+			+s(close-hover)
+	.form
+		padding: 40px
+		width: 100%
+		height: 100%
+		.btn-sbm
+			margin-bottom: 40px
+			width: 100%
+			span
+				width: 99.5%
+//fancybox
+.fancybox-overlay-fixed
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	position: fixed
+	background: rgba(0, 0, 0, 0.5) 
+.fancybox-wrap
+	position: fixed !important
+	top: 50% !important
+	margin: 0 auto !important
+	margin-top: -340px !important
+	padding: 2px !important
+	width: 838px !important
+	height: 638px !important
+	border: 1px solid #4c382f 
+	background: #3F2B23 
+	+box
+	.fancybox-skin
+		position: relative
+		border: 1px solid #714F3F 
+		height: 100% !important
+		+box
+		.fancybox-close
+			position: absolute
+			top: 4px
+			right: 4px
+			z-index: 2000 !important
+			+s(close)
+			&:hover
+				position: absolute
+				top: 3px
+				right: 4px
+				+s(close-hover)
+.fancybox-inner
+	display: block
+.fancybox-nav
+	position: absolute
+	top: 50%
+	margin-top: -22px
+	text-decoration: none
+	cursor: pointer
+	z-index: 8040
+	+s(pref-fen1)
+	&:hover
+		+s(pref-fen)
+.fancybox-prev
+	left: -125px
+	+rotate(180, deg)
+.fancybox-next
+	right: -125px

@@ -11,18 +11,17 @@
 	<script src="js/jquery.js"></script>
 	<script src="js/cycle.js"></script>
 	<script src="js/jquery.cycle2.carousel.js"></script>
+	<script src="js/jquery.fancybox.js"></script>
 	<script src="js/common.js"></script>
 </head>
 <body>
-<!-- begin wrapsite  -->
+<!-- BEGIN wrapsite  -->
 <div class="wrapsite">
-	
-
 	<!-- BEGIN .header -->
 	<header class="header">
 		<div class="header__left">
 			<h5 class="title-top">Кск всадница</h5>
-			<p class="content-text">конно-спортивный клуб</p>
+			<p>конно-спортивный клуб</p>
 		</div>
 		<div class="header__right">
 			<menu class="menu-top">
@@ -33,7 +32,7 @@
 				<li class="menu-top__item"><a href="#">Контакты</a></li>
 			</menu> 
 			<div class="header__phone title-top">+7 (903) 520-65-70</div>
-			<a  class="header__address content-text" href="#">Мытищинский район, д. Ульянково</a>
+			<a  class="header__address" href="#">Мытищинский район, д. Ульянково</a>
 		</div>
 	</header>
 	<!-- END .header -->
@@ -51,64 +50,65 @@
 	<!-- END .menu -->
 	<!-- BEGIN .container -->
 	<div class="container">
-		<div class="cycle-block">
-			<div class="cycle-slideshow" 
+		<div class="cycle__row">
+			<div class="cycle-slideshow cycle" 
 		    data-cycle-fx=scrollHorz
 				data-cycle-pager-template="<button></button>"
-        data-cycle-prev=".cycle-slideshow__prev"
-        data-cycle-next=".cycle-slideshow__next"
-        data-cycle-slides=".cycle-slideshow__item"
+        data-cycle-prev=".cycle__nav_prev"
+        data-cycle-next=".cycle__nav_next"
+        data-cycle-slides=".cycle__item"
 		    data-cycle-timeout="4000"
+		    data-cycle-pause-on-hover="true"
 		    >
-		    <div class="cycle-slideshow__item">
-		    	<div class="cycle-slideshow__item_left">
+		    <div class="cycle__item">
+		    	<div class="cycle__item_left">
 		    		<img src="img/img1.png">
-		    		<div class="cycle-slideshow__shadow"></div>
+		    		<div class="cycle__shadow"></div>
 		    	</div>
-		    	<div class="cycle-slideshow__item_right">
+		    	<div class="cycle__item_right">
 		    		<h3 class="title-slideshow">Запись на занятия и верховые прогулки</h3>
-		    		<p class="text-slideshow">Приглашаем всех гостей прокатиться <span class="text-slideshow_big">верхом на лошадях!</span></p>
+		    		<p>Приглашаем всех гостей прокатиться <span class="cycle__text_big">верхом на лошадях!</span></p>
 		    		<a class="btn" href="#"><i></i><span></span>Записаться</a>
 		    	</div>
 		    </div> 
-		    <div class="cycle-slideshow__item">
-		    	<div class="cycle-slideshow__item_left">
+		    <div class="cycle__item">
+		    	<div class="cycle__item_left">
 		    		<h3 class="title-slideshow">Соревнования различной сложности</h3>
-		    		<p class="text-slideshow">Принимайте участие в соревнованиях нашего клуба!</p>
+		    		<p>Принимайте участие в соревнованиях нашего клуба!</p>
 		    		<a class="btn" href="#"><i></i><span></span>Узнать больше</a>
 		    	</div>
-		    	<div class="cycle-slideshow__item_right">
+		    	<div class="cycle__item_right">
 		    		<img src="img/img2.png">
-		    		<div class="cycle-slideshow__shadow"></div>
+		    		<div class="cycle__shadow"></div>
 		    	</div>
 		    </div> 
-		    <div class="cycle-slideshow__item">
-		    	<div class="cycle-slideshow__item_left">
+		    <div class="cycle__item">
+		    	<div class="cycle__item_left">
 		    		<h3 class="title-slideshow">Фотосессии для вас и ваших близких</h3>
-		    		<p class="text-slideshow">Предоставляем лошадей</p>
-		    		<p class="text-slideshow">для съемок на природе</p>
+		    		<p>Предоставляем лошадей</p>
+		    		<p>для съемок на природе</p>
 		    		<a class="btn" href="#"><i></i><span></span>Узнать больше</a>
 		    	</div>
-		    	<div class="cycle-slideshow__item_right">
+		    	<div class="cycle__item_right">
 		    		<img src="img/img3.png">
-		    		<div class="cycle-slideshow__shadow"></div>
+		    		<div class="cycle__shadow"></div>
 		    	</div>
 		    </div> 
-		    <div class="cycle-slideshow__item">
-		    	<div class="cycle-slideshow__item_left">
+		    <div class="cycle__item">
+		    	<div class="cycle__item_left">
 		    		<img src="img/img4.png">
-		    		<div class="cycle-slideshow__shadow"></div>
+		    		<div class="cycle__shadow"></div>
 		    	</div>
-		    	<div class="cycle-slideshow__item_right">
+		    	<div class="cycle__item_right">
 		    		<h3 class="title-slideshow">Групповые занятия для детей и взрослых</h3>
-		    		<p class="text-slideshow">Приезжайте к нам всей семьей!</p>
-		    		<p class="text-slideshow">Мы будем рады вас порадовать!</p>
+		    		<p>Приезжайте к нам всей семьей!</p>
+		    		<p>Мы будем рады вас порадовать!</p>
 		    		<a class="btn" href="#"><i></i><span></span>Записаться</a>
 		    	</div>
 		    </div> 
 			</div>
-			<button class="cycle-slideshow__nav cycle-slideshow__prev"><i></i></button>
-			<button class="cycle-slideshow__nav cycle-slideshow__next"><i></i></button>
+			<button class="cycle__nav cycle__nav_prev"><i></i></button>
+			<button class="cycle__nav cycle__nav_next"><i></i></button>
 			<div class="block-shadow">
 				<div class="shadow"></div>
 				<div class="line"></div>
@@ -117,79 +117,79 @@
 		<!-- BEGIN .l -->
 		<div class="l">
 			<!-- BEGIN .l-col__left -->
-			<div class="l-col__left">
-				<h3 class="l-title">События<div class="line"></div></h3>
-				<div class="date date_top content-text">15 ноября 2013</div>
+			<div class="l__left">
+				<h3 class="title-l">События<div class="line"></div></h3>
+				<div class="date date_top">15 ноября 2013</div>
 				<a class="title-article" href="#">Турнир по верховой езде состоится 15 ноября</a>
-				<div class="article-field content-text">
-					<div class="article-field__img"><img src="img/arr1.png" alt="img"></div>
+				<div class="article article_pad">
+					<div class="article__img"><img src="img/arr1.png" alt="img"></div>
 					<p>Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца. Я совсем один и блаженствую в здешнем краю, словно созданном для таких, как я. Я так счастлив, мой друг, так упоен ощущением покоя, что искусство мое страдает от этого. Ни одного штриха не мог бы я сделать, а никогда не был таким большим художником, как в эти минуты.</p>
-					<p>Когда от милой моей долины поднимается пар и Когда от милой моей долины поднимается пар и полдневное солнце стоит над непроницаемой чащей темного леса и лишь редкий луч проскальзывает в его <a class="article-link" href="#">святая святых</a></p>
+					<p>Когда от милой моей долины поднимается пар и Когда от милой моей долины поднимается пар и полдневное солнце стоит над непроницаемой чащей темного леса и лишь редкий луч проскальзывает в его <a href="#">святая святых</a></p>
 					<div class="line"></div>
 				</div>
-				<div class="article-block">
-					<div class="article-block__img">
+				<div class="article__block">
+					<div class="article__img">
 						<img src="img/arr2.png" alt="img">
 					</div>
-					<div class="date content-text">27 октября 2013 года</div>
-						<a class="article-link" href="#">Многодетные семьи Горловки побывали в гостях у конно- спортивного комплекса</a>
+					<div class="date">27 октября 2013 года</div>
+						<a class="article__link" href="#">Многодетные семьи Горловки побывали в гостях у конно- спортивного комплекса</a>
 				</div>
-				<div class="article-block">
-					<div class="article-block__img">
+				<div class="article__block">
+					<div class="article__img">
 						<img src="img/arr3.png" alt="img">
 					</div>
-					<div class="date content-text">27 октября 2013 года</div>
-						<a class="article-link" href="#">Многодетные семьи Горловки побывали в гостях у конно- спортивного комплекса</a>
+					<div class="date">27 октября 2013 года</div>
+						<a class="article__link" href="#">Многодетные семьи Горловки побывали в гостях у конно- спортивного комплекса</a>
 				</div>
-				<div class="article-block">
-					<div class="article-block__img">
+				<div class="article__block">
+					<div class="article__img">
 						<img src="img/arr4.png" alt="img">
 					</div>
-					<div class="date content-text">27 октября 2013 года</div>
-						<a class="article-link" href="#">Награды чемпионата и первенства СФО по выездке завоевали алтайские наездницы</a>
+					<div class="date">27 октября 2013 года</div>
+						<a class="article__link" href="#">Награды чемпионата и первенства СФО по выездке завоевали алтайские наездницы</a>
 				</div>
 			</div>
 			<!-- END .l-col__left -->
 			<!-- BEGIN .l-col__right -->
-			<div class="l-col__right">
-				<div class="article-row">
+			<div class="l__right">
+				<div class="board">
 					<h3 class="title-ads">Доска объявлений</h3>
-					<div class="article-col">
-						<div class="date content-text">15 ноября 2013</div>
-						<a class="article-link" href="#">Продается жеребец</a>
+					<div class="board__col">
+						<div class="date">15 ноября 2013</div>
+						<a class="board__link" href="#">Продается жеребец</a>
 						<p>Англо-буденновской породы. 2008г. Рост 164. Только под...</p>
 					</div>
-					<div class="article-col">
-						<div class="date content-text">15 ноября 2013</div>
-						<a class="article-link" href="#">Скаковой жеребец</a>
+					<div class="board__col">
+						<div class="date">15 ноября 2013</div>
+						<a class="board__link" href="#">Скаковой жеребец</a>
 						<p>Продается буденновский жеребец 2008 года (Румб-Рэмби11)...</p>
 					</div>
-					<div class="article-col">
-						<div class="date content-text">15 ноября 2013</div>
-						<a class="article-link" href="#">Продается жеребец. Кличка Тарзан</a>
+					<div class="board__col">
+						<div class="date">15 ноября 2013</div>
+						<a class="board__link" href="#">Продается жеребец. Кличка Тарзан</a>
 						<p>Продается лошадь (жеребец). Масть</p>
 					</div>
-					<div class="article-col">
-						<div class="date content-text">15 ноября 2013</div>
-						<a class="article-link" href="#">Продается жеребец</a>
+					<div class="board__col">
+						<div class="date">15 ноября 2013</div>
+						<a class="board__link" href="#">Продается жеребец</a>
 						<p>Англо-буденновской породы. 2008г. Рост 164. Только под...</p>
 					</div>
-					<div class="article-col">
-						<div class="date content-text">15 ноября 2013</div>
-						<a class="article-link" href="#">Продается жеребец</a>
+					<div class="board__col">
+						<div class="date">15 ноября 2013</div>
+						<a class="board__link" href="#">Продается жеребец</a>
 						<p>Англо-буденновской породы. 2008г. Рост 164. Только под...</p>
 					</div>
-					<a class="all-link" href="#"><i></i>Все объявления</a>
+					<a class="soc-link" href="#"><i></i>Все объявления</a>
 				</div>
 			</div>
 			<!-- END .l-col__right -->
 		</div>
 		<!-- END .l -->
 		<!-- BEGIN .photo-gallery -->
-		<div class="photo-gallery">
-			<h3 class="l-title">Фотогалерея<div class="line"></div></h3>
-			<div class="carousel-block">
-				<div class="cycle-slideshow carousel" 
+		<div class="carousel">
+			<h3 class="title-l">Фотогалерея<div class="line"></div></h3>
+			<div class="carousel__block">
+				<div class="cycle-slideshow" 
 			    data-cycle-fx="carousel"
 			    data-cycle-timeout="3000"
 			    data-cycle-carousel-visible="5"
@@ -199,19 +199,19 @@
 			    data-cycle-slides=".carousel__item"
 			    >
 			    <div class="carousel__item">
-			    	<img src="img/arr5.png">
+			    	<a class="fancybox" href="img/pic-33.png" data-fancybox-group="gallery"><img src="img/arr5.png" alt="img"></a>
 			    </div>
 			    <div class="carousel__item">
-			    	<img src="img/arr6.png">
+			    	<a class="fancybox" href="img/pic-33.png" data-fancybox-group="gallery"><img src="img/arr6.png" alt="img"></a>
 			    </div>
 			    <div class="carousel__item">
-			    	<img src="img/arr7.png">
+			    	<a class="fancybox" href="img/pic-33.png" data-fancybox-group="gallery"><img src="img/arr7.png" alt="img"></a>
 			    </div>
 			    <div class="carousel__item">
-			    	<img src="img/arr8.png">
+			    	<a class="fancybox" href="img/pic-33.png" data-fancybox-group="gallery"><img src="img/arr8.png" alt="img"></a>
 			    </div>
 			    <div class="carousel__item">
-			    	<img src="img/arr9.png">
+			    	<a class="fancybox" href="img/pic-33.png" data-fancybox-group="gallery"><img src="img/arr9.png" alt="img"></a>
 			    </div>
 				</div>
 				<button class="carousel__nav carousel__nav_prev"><i></i></button>
@@ -241,6 +241,6 @@
 	</footer>
 	<!-- END .footer -->
 </div>
-<!-- end wrapsite -->
+<!-- END wrapsite  -->
 </body>
 </html>
