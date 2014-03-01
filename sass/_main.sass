@@ -138,6 +138,9 @@
 .cycle__item_left
 	width: 50%
 	float: left
+	img
+		float: left
+		padding-left: 18px
 .cycle__item_right
 	width: 50%
 	float: right
@@ -147,7 +150,7 @@
 	color: #CEB397 
 	font-size: 30px
 	font-weight: 400
-	line-height: 45px
+	line-height: 40px
 	+sn
 	.cycle__shadow
 		position: absolute
@@ -162,7 +165,7 @@
 		color: #F2CF71 
 		font-size: 40px
 		font-weight: 400
-		letter-spacing: 4px 
+		letter-spacing: 1px 
 		line-height: 48px
 		+sr
 	.cycle__text_big
@@ -217,9 +220,9 @@
 	font-weight: normal
 	+sn
 .date_top
-	margin: 28px 0 10px
+	margin: 28px 0 5px
 .date_doings
-	margin: 20px 0 10px
+	margin: 12px 0 10px
 .article
 	position: relative
 	margin: 18px 0 18px
@@ -231,13 +234,13 @@
 	.line
 		position: absolute
 		background: none 
-		border-top: 1px dotted #714f3f
+		border-top: 1px dashed #714f3f
 		left: -40%
 		bottom: -7px
 		width: 950px
 .article_pad
-	margin-top: 10px
-	padding-right: 72px 
+	margin-top: 0
+	padding-right: 17px 
 .article_mod
 	margin: 0
 	padding: 12px 9px 35px 0
@@ -251,9 +254,12 @@
 	img
 		display: block
 .article__block
-	margin-right: 40px
+	margin-left: 40px
 	width: 186px
 	display: inline-block
+	.date
+		font-size: 12px
+		text-decoration: none
 	.article__img
 		margin-bottom: 10px
 		width: 184px
@@ -261,23 +267,28 @@
 		background: #D7D4D2 
 		img
 			opacity: 0.9
-			&:hover
-				opacity: 1
-				+transition(0.2s)
+	&:hover
+		img
+			+transition(0.2s)
+			opacity: 1
+		a
+			text-decoration: none
 	.article__link
 		margin-top: 10px
 		color: #E0CA92 
-		letter-spacing: 1px 
+		letter-spacing: 0.4px 
 		+sr
 		&:hover
 			text-decoration: none
+.article__block_mod
+	margin-left: 0
 .board
 	padding: 20px 18px 12px 15px 
 	width: 272px
 	border: 1px solid #714F3F 
 	+box
 	.board__link
-		margin: 8px 0 7px
+		margin: 6px 0
 		letter-spacing: 1px 
 		display: inline-block
 .title-ads
@@ -289,7 +300,7 @@
 .board, .form
 	.title-ads
 		position: relative
-		margin-bottom: 16px 
+		margin-bottom: 15px 
 		padding-bottom: 7px
 		line-height: 1
 		&:before
@@ -306,7 +317,7 @@
 	margin-bottom: 15px
 	max-height: 125px
 	color: #CEB397 
-	border-bottom: 1px dotted #000 
+	border-bottom: 1px dashed #000 
 	+box
 	+sn
 	&:before
@@ -316,10 +327,10 @@
 		bottom: -1px
 		width: 100%
 		height: 1px
-		opacity: 0.8 
+		opacity: 0.7
 		+gh(#714f3f, #402b23)
 .carousel
-	margin-top: 40px
+	margin-top: 36px
 	.title-l .line
 		left: -80%
 		width: 1900px
@@ -359,7 +370,7 @@
 .filter
 	position: relative
 	padding: 2px
-	margin-top: 25px
+	margin-top: 20px
 	width: 100%
 	height: 34px
 	border: solid 1px #4C382F 
@@ -474,7 +485,6 @@
 		+gh(#714F3F, #3f2b23)
 .price
 	margin-bottom: 30px
-	padding-right: 54px
 	line-height: 1
 	+box
 	.title-price
@@ -588,6 +598,7 @@
 			content: ''
 			top: 108px
 			left: 390px
+			cursor: pointer
 			+s(map-pic)
 // popup
 .popup
@@ -598,7 +609,10 @@
 	width: 100%
 	z-index: 1000
 	position: fixed
-	background: rgba(0, 0, 0, .4) 
+	background: rgba(0, 0, 0, .4)
+	display: none
+	&.is-active
+		display: block 
 .poput__field
 	position: absolute
 	padding: 2px
@@ -627,10 +641,12 @@
 		width: 100%
 		height: 100%
 		.btn-sbm
-			margin-bottom: 40px
+			margin-bottom: 30px
 			width: 100%
 			span
 				width: 99.5%
+		.title-ads
+			font-size: 30px
 //fancybox
 .fancybox-overlay-fixed
 	position: absolute
@@ -649,6 +665,7 @@
 	width: 838px !important
 	height: 638px !important
 	border: 1px solid #4c382f 
+	z-index: 10000 !important
 	background: #3F2B23 
 	+box
 	.fancybox-skin
@@ -684,3 +701,42 @@
 	+rotate(180, deg)
 .fancybox-next
 	right: -125px
+.wrapper
+	position: relative
+	padding: 5px 5px 25px 
+	color: #9B8168 !important
+	line-height: 1.5 
+	font-size: 16px
+	z-index: 10000
+	background: #3F2B23 
+	+box
+	+sn
+	.wrapper__topblock
+		margin-bottom: 10px
+	.article__img
+		margin: 6px 20px 5px 0 
+		width: 298px
+		height: 298px
+	.title-ajax
+		margin-bottom: 10px
+		color: #E0CA92 !important
+		line-height: 1
+		font-size: 30px
+		font-weight: 400 
+		+sr
+.fancybox-outer
+	.nav
+		position: absolute
+		top: 50%
+		margin-top: -22px
+		text-decoration: none
+		cursor: pointer
+		z-index: 8040
+		+s(pref-fen1)
+		&:hover
+			+s(pref-fen)
+	.nav_prev
+		left: -125px
+		+rotate(180, deg)
+	.nav_next
+		right: -125px
