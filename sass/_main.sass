@@ -11,8 +11,10 @@
 	+sn
 .header__left
 	float: left
+	letter-spacing: 0.5px 
 	.title-top
-		margin: 38px 0 9px 0 
+		margin: 38px 0 9px 0
+		letter-spacing: 1.1px  
 .header__right
 	float: right
 	text-align: right
@@ -26,7 +28,8 @@
 	color: #E0CA92 
 	font-size: 24px
 	font-weight: 400 
-	line-height: 1
+	line-height: 0.7
+	letter-spacing: 1.2px 
 	+sr
 .menu-top
 	margin-bottom: 25px
@@ -47,6 +50,7 @@
 .header__phone
 	margin-bottom: 8px
 	color: #E0CA92 
+	letter-spacing: 0.6px 
 .menu-l
 	position: relative
 	margin-top: 25px
@@ -89,6 +93,7 @@
 	padding: 0 6px 
 	display: inline-block
 	line-height: 50px
+	letter-spacing: 0.85px 
 	font-size: 16px
 	+box 
 	+sr
@@ -130,28 +135,32 @@
 .cycle__row
 	position: relative
 	margin-top: 5px
-	margin-bottom: 30px
+	margin-bottom: 23px
 	height: 460px
 .cycle__item
 	width: 100%
 	height: 460px
 .cycle__item_left
-	width: 50%
 	float: left
+	padding-left: 10px
+	width: 40%
 	img
 		float: left
 		padding-left: 18px
 .cycle__item_right
-	width: 50%
 	float: right
+	padding-left: 40px
+	width: 60%
 .cycle__item_left, .cycle__item_right
 	position: relative
 	text-align: center
 	color: #CEB397 
 	font-size: 30px
 	font-weight: 400
-	line-height: 40px
+	letter-spacing: 1.65px 
+	line-height: 45px
 	+sn
+	+box
 	.cycle__shadow
 		position: absolute
 		left: 50%
@@ -162,20 +171,23 @@
 		+box-shadow(0 0 130px 30px #fff)
 	.title-slideshow
 		margin-top: 70px
+		padding: 0 0 20px 13px
 		color: #F2CF71 
 		font-size: 40px
 		font-weight: 400
-		letter-spacing: 1px 
+		letter-spacing: 3.5px 
 		line-height: 48px
 		+sr
 	.cycle__text_big
+		padding-left: 11px
 		font-size: 44px
+		letter-spacing: 4.4px 
 	.btn
 		margin-top: 30px
 .cycle__nav
 	position: absolute
 	top: 50%
-	margin-top: -22px
+	margin-top: -26px
 	+s(pic-pref)
 	i
 		position: absolute
@@ -190,7 +202,7 @@
 .cycle__nav_prev
 	left: -62px
 .cycle__nav_next
-	right: -62px
+	right: -65px
 	+rotate(180, deg)
 .block-shadow
 	position: absolute
@@ -220,14 +232,16 @@
 	font-weight: normal
 	+sn
 .date_top
-	margin: 28px 0 5px
+	margin: 26px 0 7px
+	letter-spacing: 0.7px 
 .date_doings
-	margin: 12px 0 10px
+	margin: 17px 0 10px
 .article
 	position: relative
-	margin: 18px 0 18px
-	padding: 18px 0
+	margin: 18px 0 13px
+	padding: 30px 0 19px 3px
 	line-height: 21px
+	letter-spacing: 0.2px 
 	overflow: hidden 
 	+sn
 	+box
@@ -240,10 +254,14 @@
 		width: 950px
 .article_pad
 	margin-top: 0
-	padding-right: 17px 
+	padding-right: 6px 
 .article_mod
 	margin: 0
-	padding: 12px 9px 35px 0
+	padding: 10px 9px 26px 0
+	line-height: 1.5
+	letter-spacing: 0 
+	.article__img
+		margin-right: 23px
 .article__img
 	float: left
 	margin: 6px 20px 0 0
@@ -258,10 +276,11 @@
 	width: 186px
 	display: inline-block
 	.date
+		margin-bottom: 5px
 		font-size: 12px
 		text-decoration: none
 	.article__img
-		margin-bottom: 10px
+		margin-bottom: 6px
 		width: 184px
 		height: 118px
 		background: #D7D4D2 
@@ -288,20 +307,21 @@
 	border: 1px solid #714F3F 
 	+box
 	.board__link
-		margin: 6px 0
+		margin: 7px 0
 		letter-spacing: 1px 
 		display: inline-block
 .title-ads
 	font-size: 20px
 	text-transform: uppercase
 	color: #F2CF71 
+	letter-spacing: 0.7px 
 	font-weight: 400  
 	+sr
 .board, .form
 	.title-ads
 		position: relative
 		margin-bottom: 15px 
-		padding-bottom: 7px
+		padding-bottom: 8px
 		line-height: 1
 		&:before
 			position: absolute
@@ -320,6 +340,9 @@
 	border-bottom: 1px dashed #000 
 	+box
 	+sn
+	.date
+		padding-top: 0.5px
+		font-size: 12px
 	&:before
 		position: absolute
 		content: ''
@@ -351,9 +374,9 @@
 			i
 				opacity: 1
 	.carousel__nav_prev
-		left: -32px
+		left: -28px
 	.carousel__nav_next
-		right: -32px
+		right: -35px
 		+rotate(180, deg)
 	.cycle-slideshow
 		margin: 20px 0 40px 
@@ -419,7 +442,7 @@
 		width: 398px
 		height: 298px
 	.title-article
-		margin-bottom: 10px
+		margin-bottom: 18px
 		display: inline-block
 	.line
 		left: -100%
@@ -427,18 +450,21 @@
 	.line_mod
 		border-top: 1px solid #704e3e
 	.soc-link_fot
-		margin-left: 38px
+		margin-left: 33px
 .article__field
-	margin-bottom: 20px
+	margin-bottom: 12px
 	display: inline-block
 .article_board
 	margin: 0
-	padding-top: 12px
-	padding-right: 18px
+	padding: 12px 11px 22px 0
 	border-bottom: 1px dashed #714f3f 
 	.title-article
 		margin-bottom: 15px
 		display: block
+	.date
+		margin-bottom: 10px
+	.article__img
+		margin-right: 17px
 // photo
 .gallery
 	position: relative
@@ -455,7 +481,7 @@
 	.article__block
 		margin: 20px 0 20px 36px
 		width: 215px
-		height: 188px
+		height: 185px
 		overflow: hidden
 		vertical-align: top
 		.article__img
@@ -464,18 +490,20 @@
 			height: 138px
 .gallery__treners
 	.article__block
-		height: 238px
+		height: 240px
 		.article__link
+			margin-top: 2px
 			margin-bottom: 8px 
 			display: inline-block
+			font-size: 18px
 // price
 .l_price
 	position: relative
 	margin-top: 0
-	margin-bottom: 15px
+	margin-bottom: 41px
 	.title-l
 		margin-top: 0 !important
-		margin-bottom: 28px
+		margin-bottom: 34px
 	&:before
 		position: absolute
 		content: ''
@@ -485,12 +513,13 @@
 		height: 1px
 		+gh(#714F3F, #3f2b23)
 .price
-	margin-bottom: 30px
+	margin-bottom: 38px
 	line-height: 1
 	+box
 	.title-price
 		padding-bottom: 5px 
 		border-bottom: 1px dashed #714f3f
+		letter-spacing: 0.8px 
 .title-price
 	font-size: 20px
 	color: #E4CF98 
@@ -516,21 +545,24 @@
 	border-bottom: 1px dotted #714f3f
 	overflow: hidden 
 .l__right2
+	line-height: 1.6 
 	.title-price
 		color: #F2CF71
 		line-height: 1.5
-		margin-bottom: 14px
-	p
 		margin-bottom: 20px
+		letter-spacing: 0.7px 
+	p
+		margin-bottom: 13px
 // contacts
 .contacts
 	margin-top: 5px
 	.title-l
 		margin: 0
 .contacts__inf
-	margin: 15px 0
+	margin: 17px 0
 	color: #CEB397 
 	font-size: 16px
+	letter-spacing: 1.35px 
 	line-height: 1
 	span
 		color: #9B8168
@@ -541,16 +573,17 @@
 .form
 	width: 278px
 	height: 288px
-	padding: 20px 19px
+	padding: 15px 20px 20px 16px
 	border: 1px solid #714f3f 
 	+box 
 .form__field
-	margin-bottom: 10px
+	margin-bottom: 13px
 	input, textarea
-		padding: 8px
+		padding: 3px 9px
 		width: 100%
 		color: #CEB397 
-		line-height: 1
+		line-height: 1.2
+		letter-spacing: 1px
 		border: 1px solid #543B30 
 		background: #412D24 
 		+box-shadow(inset 0 0 5px #2e211b)
@@ -560,13 +593,14 @@
 			color: #CEB397
 			+sn
 	input
-		height: 28px
-		line-height: 28px
+		height: 29px
+		line-height: 23px
 	textarea
 		height: 78px
 		resize: none
 .form__field_textarea
 	position: relative
+	margin-bottom: 4px
 	&:before
 		position: absolute
 		content: "" 
