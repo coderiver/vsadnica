@@ -158,9 +158,9 @@ body { position: relative; font-size: 14px; line-height: 1.4; background: url(".
 
 .cycle__item_right { float: right; padding-left: 40px; width: 60%; }
 
-.cycle__item_leftmod { width: 51%; }
+.cycle__item_leftmod { width: 52%; }
 
-.cycle__item_rightmod { width: 49%; }
+.cycle__item_rightmod { width: 48%; }
 
 .cycle__item_left, .cycle__item_right { position: relative; text-align: center; color: #ceb397; font-size: 30px; font-weight: 400; letter-spacing: 1.65px; line-height: 45px; font-family: "PT Sans", Arial, sans-serif; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 .cycle__item_left .cycle__shadow, .cycle__item_right .cycle__shadow { position: absolute; left: 50%; top: 45%; width: 0.1px; height: 0.1px; z-index: -1; -webkit-box-shadow: 0 0 130px 30px white; -moz-box-shadow: 0 0 130px 30px white; box-shadow: 0 0 130px 30px white; }
