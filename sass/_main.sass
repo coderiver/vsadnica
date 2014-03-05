@@ -151,6 +151,10 @@
 	float: right
 	padding-left: 40px
 	width: 60%
+.cycle__item_leftmod
+	width: 51%
+.cycle__item_rightmod
+	width: 49%
 .cycle__item_left, .cycle__item_right
 	position: relative
 	text-align: center
@@ -570,12 +574,17 @@
 		color: #F2CF71 
 		text-decoration: none
 		+sn
+		&:hover
+			text-decoration: underline
 .form
 	width: 278px
 	height: 288px
 	padding: 15px 20px 20px 16px
 	border: 1px solid #714f3f 
 	+box 
+.form_mod
+	padding-top: 35px
+	text-align: center
 .form__field
 	margin-bottom: 13px
 	input, textarea
@@ -628,11 +637,15 @@
 		+box
 		img
 			display: block
+		#YMapsID
+			height: 382px
+			width: 100%
 		&:before
 			position: absolute
 			content: ''
 			top: 108px
 			left: 390px
+			z-index: 100
 			cursor: pointer
 			+s(map-pic)
 // popup
@@ -703,6 +716,8 @@
 	z-index: 10000 !important
 	background: #3F2B23 
 	+box
+	&:focus
+		outline-width: 0 !important 
 	.fancybox-skin
 		position: relative
 		border: 1px solid #714F3F 
