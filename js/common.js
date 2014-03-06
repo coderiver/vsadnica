@@ -16,14 +16,22 @@ $(document).ready(function() {
             return false;
         });
 
-    ymaps.ready(function () {
-        var myMap = new ymaps.Map('YMapsID', {
+    ymaps.ready(init);
+    var myMap, 
+        myPlacemark;
+
+    function init(){ 
+        myMap = new ymaps.Map ("map", {
             center: [56.0009, 37.7220],
-            zoom: 13,
-            // Обратите внимание, что в API 2.1 по умолчанию карта создается с элементами управления.
-            // Если вам не нужно их добавлять на карту, в ее параметрах передайте пустой массив в поле controls.
-            controls: []
+            zoom: 13
+        }); 
+        
+        myPlacemark = new ymaps.Placemark([56.0041, 37.7120], {
+            hintContent: 'Ульянково!',
+            balloonContent: 'Ульянково'
         });
-    });
+        
+        myMap.geoObjects.add(myPlacemark);
+    }
 });
     $('.fancybox').fancybox();

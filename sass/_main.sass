@@ -601,6 +601,9 @@
 		+placeholder
 			color: #CEB397
 			+sn
+		&:focus
+			+placeholder
+				font-size: 0
 	input
 		height: 29px
 		line-height: 23px
@@ -637,17 +640,19 @@
 		+box
 		img
 			display: block
-		#YMapsID
+		#map
 			height: 382px
 			width: 100%
-		&:before
-			position: absolute
-			content: ''
-			top: 108px
-			left: 390px
-			z-index: 100
-			cursor: pointer
-			+s(map-pic)
+		.ymaps-image-with-content
+			width: 0 !important
+			&:before
+				position: absolute
+				content: ''
+				top: -6px
+				left: -19px
+				z-index: 100
+				cursor: pointer
+				+s(map-pic)
 // popup
 .popup
 	position: absolute

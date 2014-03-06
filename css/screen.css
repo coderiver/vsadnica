@@ -311,6 +311,11 @@ body { position: relative; font-size: 14px; line-height: 1.4; background: url(".
 .form__field input::-moz-placeholder, .form__field textarea::-moz-placeholder { color: #ceb397; font-family: "PT Sans", Arial, sans-serif; }
 .form__field input::-webkit-input-placeholder, .form__field textarea::-webkit-input-placeholder { color: #ceb397; font-family: "PT Sans", Arial, sans-serif; }
 .form__field input::placeholder, .form__field textarea::placeholder { color: #ceb397; font-family: "PT Sans", Arial, sans-serif; }
+.form__field input:focus:-ms-input-placeholder, .form__field textarea:focus:-ms-input-placeholder { font-size: 0; }
+.form__field input:focus:-moz-placeholder, .form__field textarea:focus:-moz-placeholder { font-size: 0; }
+.form__field input:focus::-moz-placeholder, .form__field textarea:focus::-moz-placeholder { font-size: 0; }
+.form__field input:focus::-webkit-input-placeholder, .form__field textarea:focus::-webkit-input-placeholder { font-size: 0; }
+.form__field input:focus::placeholder, .form__field textarea:focus::placeholder { font-size: 0; }
 .form__field input { height: 29px; line-height: 23px; }
 .form__field textarea { height: 78px; resize: none; }
 
@@ -323,8 +328,9 @@ body { position: relative; font-size: 14px; line-height: 1.4; background: url(".
 .map .map__field { padding: 4px; border: 1px solid #714f3f; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 .map .map__img { position: relative; border: 1px solid #714f3f; height: 382px; overflow: hidden; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 .map .map__img img { display: block; }
-.map .map__img #YMapsID { height: 382px; width: 100%; }
-.map .map__img:before { position: absolute; content: ""; top: 108px; left: 390px; z-index: 100; cursor: pointer; background: url('../img/icons-s70700bc666.png') 0 0 no-repeat; width: 64px; height: 69px; }
+.map .map__img #map { height: 382px; width: 100%; }
+.map .map__img .ymaps-image-with-content { width: 0 !important; }
+.map .map__img .ymaps-image-with-content:before { position: absolute; content: ""; top: -6px; left: -19px; z-index: 100; cursor: pointer; background: url('../img/icons-s70700bc666.png') 0 0 no-repeat; width: 64px; height: 69px; }
 
 .popup { position: absolute; top: 0; left: 0; bottom: 0; width: 100%; z-index: 1000; position: fixed; background: rgba(0, 0, 0, 0.4); display: none; }
 .popup.is-active { display: block; }
