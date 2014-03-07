@@ -351,7 +351,7 @@ body { position: relative; font-size: 14px; line-height: 1.4; background: url(".
 .fancybox-wrap .fancybox-skin .fancybox-close { position: absolute; top: 4px; right: 4px; z-index: 2000 !important; background: url('../img/icons-s70700bc666.png') 0 -265px no-repeat; width: 10px; height: 11px; }
 .fancybox-wrap .fancybox-skin .fancybox-close:hover { position: absolute; top: 3px; right: 4px; background: url('../img/icons-s70700bc666.png') 0 -286px no-repeat; width: 10px; height: 11px; }
 
-.fancybox-inner { display: block; }
+.fancybox-inner { width: auto !important; height: auto !important; display: block; }
 
 .fancybox-nav { position: absolute; top: 50%; margin-top: -22px; text-decoration: none; cursor: pointer; z-index: 8040; background: url('../img/icons-s70700bc666.png') 0 -307px no-repeat; width: 22px; height: 44px; }
 .fancybox-nav:hover { background: url('../img/icons-s70700bc666.png') 0 -211px no-repeat; width: 22px; height: 44px; }
