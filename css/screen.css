@@ -105,6 +105,8 @@ body { position: relative; font-size: 14px; line-height: 1.4; background: url(".
 .development { position: relative; padding-right: 50px; display: inline-block; }
 .development a { position: absolute; top: 50%; right: 0; margin-top: -8px; background: url('../img/icons-sd69d07c121.png') 0 -146px no-repeat; width: 41px; height: 16px; }
 
+.selected { color: #a1812a !important; }
+
 .l { *zoom: 1; }
 .l:after { content: " "; display: table; clear: both; }
 .l .l__left { overflow: hidden; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
