@@ -236,7 +236,7 @@ body { position: relative; font-size: 14px; line-height: 1.4; background: url(".
 .carousel__item { margin-right: 20px; width: 178px; height: 118px; border: 1px solid #322019; overflow: hidden; }
 .carousel__item img { display: block; }
 
-.filter { position: relative; padding: 2px; margin-top: 20px; width: 100%; height: 34px; border: solid 1px #4c382f; background: #473229; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.filter { position: relative; padding: 2px; margin-top: 20px; width: 100%; border: solid 1px #4c382f; background: #473229; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .filter__row { padding: 0 10px 0 0; line-height: 26px; border: 1px solid #714f3f; }
 .filter__row .filter__item { margin: 4px 5px 0; padding: 0 5px; color: #9b8168; font-size: 12px; line-height: 20px; vertical-align: top; display: inline-block; -moz-transition: 0.2s; -o-transition: 0.2s; -webkit-transition: 0.2s; transition: 0.2s; font-family: "PT Sans", Arial, sans-serif; }
